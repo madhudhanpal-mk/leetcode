@@ -1,11 +1,11 @@
 class Solution:
-    def isPolindrome(self, x: int) -> bool:
-        if x < 0 : return False
+    def isPolindrome(self, x:int) -> bool:
+        if x < 0: return False
 
         div = 1
         while x >= 10 * div:
             div *= 10
-
+        
         while x:
             right = x % 10
             left = x // div
@@ -14,9 +14,9 @@ class Solution:
 
             x = (x % div) // 10
             div = div / 100
-        
+            
         return True
 
-s1 = Solution()
+c1 = Solution()
 num = 121
-print(s1.isPolindrome(num))
+print(c1.isPolindrome(num))
